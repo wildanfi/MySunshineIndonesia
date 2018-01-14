@@ -1,5 +1,6 @@
 package com.example.wildanfi.mysunshineindonesia.adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.wildanfi.mysunshineindonesia.activity.DetailWeatherActivity;
 import com.example.wildanfi.mysunshineindonesia.viewholder.WeatherViewHolder;
 
 /**
@@ -33,5 +35,7 @@ public class WeatherAdapter extends Adapter implements WeatherViewHolder.Weather
     @Override
     public void onWeatherClick(WeatherViewHolder holder) {
         Toast.makeText(holder.itemView.getContext(), "Ini item ke " + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(holder.itemView.getContext(), DetailWeatherActivity.class);
+        holder.itemView.getContext().startActivity(intent);
     }
 }
