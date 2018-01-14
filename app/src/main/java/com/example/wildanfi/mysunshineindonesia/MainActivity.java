@@ -10,13 +10,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class MainActivity extends AppCompatActivity {
-    private TextView mainToday;
-    private ImageView mainWeatherImage;
-    private TextView mainWeatherDesc;
-    private TextView mainWeatherTemp;
-    private RecyclerView mainWeatherList;
+    @BindView(R.id.main_today)
+    TextView mainToday;
+
+    @BindView(R.id.main_weather_image)
+    ImageView mainWeatherImage;
+
+    @BindView(R.id.main_weather_desc)
+    TextView mainWeatherDesc;
+
+    @BindView(R.id.main_weather_temp)
+    TextView mainWeatherTemp;
+
+    @BindView(R.id.main_weather_list)
+    RecyclerView mainWeatherList;
 
     private WeatherAdapter weatherAdapter;
 
@@ -29,11 +41,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mainToday = (TextView) findViewById(R.id.main_today);
+        ButterKnife.bind(this);
+
+ /*     mainToday = (TextView) findViewById(R.id.main_today);
         mainWeatherImage = (ImageView) findViewById(R.id.main_weather_image);
         mainWeatherDesc = (TextView) findViewById(R.id.main_weather_desc);
         mainWeatherTemp = (TextView) findViewById(R.id.main_weather_temp);
-        mainWeatherList = (RecyclerView) findViewById(R.id.main_weather_list);
+        mainWeatherList = (RecyclerView) findViewById(R.id.main_weather_list);*/
 
         mainWeatherList.setLayoutManager(new LinearLayoutManager(this));
         mainWeatherList.setHasFixedSize(true);
