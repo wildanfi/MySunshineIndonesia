@@ -1,9 +1,11 @@
-package com.example.wildanfi.mysunshineindonesia;
+package com.example.wildanfi.mysunshineindonesia.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.wildanfi.mysunshineindonesia.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

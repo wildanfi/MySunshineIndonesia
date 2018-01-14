@@ -1,4 +1,4 @@
-package com.example.wildanfi.mysunshineindonesia;
+package com.example.wildanfi.mysunshineindonesia.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.example.wildanfi.mysunshineindonesia.viewholder.WeatherViewHolder;
 
 /**
  * Created by WildanFI on 14/01/2018.

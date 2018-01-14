@@ -1,4 +1,4 @@
-package com.example.wildanfi.mysunshineindonesia;
+package com.example.wildanfi.mysunshineindonesia.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.wildanfi.mysunshineindonesia.R;
+import com.example.wildanfi.mysunshineindonesia.adapter.WeatherAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
