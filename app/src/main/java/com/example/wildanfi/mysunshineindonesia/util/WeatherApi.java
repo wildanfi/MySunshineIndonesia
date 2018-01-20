@@ -2,6 +2,7 @@ package com.example.wildanfi.mysunshineindonesia.util;
 
 import com.example.wildanfi.mysunshineindonesia.App;
 import com.example.wildanfi.mysunshineindonesia.R;
+import com.example.wildanfi.mysunshineindonesia.model.WeatherResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -16,7 +17,7 @@ public interface WeatherApi {
     String API_KEY = App.getInstance().getApplicationContext().getString(R.string.api_key_weather);
 
     @GET("forecast/daily")
-    Call getDailyForecast(@Query("q") String cityName, @Query("mode") String mode,
-                          @Query("units")String unit, @Query("cnt") int countData,
-                          @Query("appid") String apiKey);
+    Call<WeatherResponse> getDailyForecast(@Query("q") String cityName, @Query("mode") String mode,
+                                           @Query("units")String unit, @Query("cnt") int countData,
+                                           @Query("appid") String apiKey);
 }
